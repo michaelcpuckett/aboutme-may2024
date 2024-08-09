@@ -31,26 +31,80 @@ article {
   align-items: center;
   align-content: center;
   place-content: center;
+}
+
+/* OPTION: Black Text with White Shadow */
+nul .shadow {
+  margin: 0.5em;
+
+  /* 1px Black/White */
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-weight: 900;
+  color: black;
+  text-shadow: white 1px 1px 0px, white -1px -1px 0px, white 1px -1px 0px,
+    white -1px 1px 0px;
+}
+
+/* OPTION: Black Text with White BLOB */
+nul .shadow {
+  /* Blob */
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-weight: 900;
+  color: black;
+  text-shadow: white 1px 1px 0px, white -1px -1px 0px, white 1px -1px 0px,
+    white -1px 1px 0px, white 2px 2px 0px, white -2px -2px 0px,
+    white 2px -2px 0px, white -2px 2px 0px, white 3px 3px 0px,
+    white -3px -3px 0px, white 3px -3px 0px, white -3px 3px 0px,
+    white 4px 4px 0px, white -4px -4px 0px, white 4px -4px 0px,
+    white -4px 4px 0px, white 5px 5px 0px, white -5px -5px 0px,
+    white 5px -5px 0px, white -5px 5px 0px, white 6px 6px 0px,
+    white -6px -6px 0px, white 6px -6px 0px, white -6px 6px 0px,
+    white 7px 7px 0px, white -7px -7px 0px, white 7px -7px 0px,
+    white -7px 7px 0px;
+}
+
+/* OPTION: White Text with Black Shadow */
+nul .shadow {
+  /* 2px White/Black */
   font-weight: bolder;
+  color: white;
+  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
+    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
+    black 2px -2px 0px, black -2px 2px 0px;
+}
 
-  /* TRBL */
+/* OPTION: White on Black Box */
+nul article {
+  font-weight: bolder;
   padding: 0.25em 0.5em 0.5em 0.5em;
-
   border: black 3px solid;
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.33);
   color: white;
 }
 
-article null {
+/* OPTION: White/Shadow on ... */
+article {
+  font-weight: bolder;
+  color: white;
+  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
+    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
+    black 2px -2px 0px, black -2px 2px 0px;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+/* On Black Box */
+article {
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+/* OPTION: Black on White Box */
+nul article {
+  font-weight: bolder;
+  padding: 0.25em 0.5em 0.5em 0.5em;
   border: white 3px solid;
   border-radius: 1em;
   background-color: rgba(255, 255, 255, 0.33);
   color: black;
-}
-
-article h1,
-article p,
-article ul {
-  margin: 0.5em;
 }
