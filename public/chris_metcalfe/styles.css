@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+main {
+  height: 100%;
+  background-color: skyblue;
+  background-image: url("ChocolateCat.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-items: center;
+  place-content: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  place-content: center;
+  font-weight: bolder;
+
+  /* TRBL */
+  padding: 0.25em 0.5em 0.5em 0.5em;
+
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+  color: white;
+}
+
+article null {
+  border: white 3px solid;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.33);
+  color: black;
+}
+
+article h1,
+article p,
+article ul {
+  margin: 0.5em;
+}
