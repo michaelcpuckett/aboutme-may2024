@@ -11,3 +11,7 @@
     - Should contain a `<ul>` tag with at least 3 `<li>` tags with your hobbies
 - In `styles.css`:
   - Add fonts, colors, etc. to style the blank HTML page.
+- Create a `script.js` file in the folder
+- Add a `<script>` tag at the end of the `<body>` in `index.html` referencing the `script.js` file.
+- In `script.js`:
+  - Add a `console.log` statement with a message about yourself
