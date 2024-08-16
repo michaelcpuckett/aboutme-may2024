@@ -108,3 +108,33 @@ nul article {
   background-color: rgba(255, 255, 255, 0.33);
   color: black;
 }
+
+#DemoMessage {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+  padding: 0.1em 0.5em;
+  color: white;
+  font-size: x-small;
+}
+
+#PowerButton {
+  /* border: black 5px solid; */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 32px;
+  height: 32px;
+  border-radius: 25%;
+}
+
+#PowerButton > img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
