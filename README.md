@@ -15,3 +15,15 @@
 - Add a `<script>` tag at the end of the `<body>` in `index.html` referencing the `script.js` file.
 - In `script.js`:
   - Add a `console.log` statement with a message about yourself
+
+## Phase Two
+
+Build a JavaScript quiz game called "Two Truths and a Lie" with 5-10 questions that act like a little trivia game about yourself. It should generate a score at the end.
+
+You will need to plan out how the game will operate, but consider the following:
+
+- building a form with radio buttons in html and css
+- accessing the form data in javascript
+- looping over and checking for correctness of each answer
+- generating the total score (or category corresponding to a score)
+- showing the real answers at the end of the quiz
