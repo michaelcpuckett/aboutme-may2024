@@ -9,6 +9,14 @@ body {
   flex-wrap: nowrap;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: grey;
+}
+
 main {
   height: 100%;
   background-color: skyblue;
@@ -137,4 +145,6 @@ nul article {
   width: inherit;
   height: inherit;
   border-radius: inherit;
+  width: 32px;
+  height: 32px;
 }
