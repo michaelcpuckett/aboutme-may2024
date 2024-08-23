@@ -40,3 +40,19 @@ ul > li {
     display: flex;
     border-radius: 15px;
 }
+
+.jsGame {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.jsGame > li a {
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.jsGame > li a:hover {
+    border-bottom: 1px solid #fefefe;
+}
