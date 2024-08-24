@@ -20,19 +20,26 @@ button {
 main {
   height: 100%;
   background-color: skyblue;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#About {
+  flex: 1 0 auto;
   background-image: url("ChocolateCat.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   place-items: center;
   place-content: center;
 }
 
-article {
+#AboutArticle {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -41,58 +48,8 @@ article {
   place-content: center;
 }
 
-/* OPTION: Black Text with White Shadow */
-nul .shadow {
-  margin: 0.5em;
-
-  /* 1px Black/White */
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  font-weight: 900;
-  color: black;
-  text-shadow: white 1px 1px 0px, white -1px -1px 0px, white 1px -1px 0px,
-    white -1px 1px 0px;
-}
-
-/* OPTION: Black Text with White BLOB */
-nul .shadow {
-  /* Blob */
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  font-weight: 900;
-  color: black;
-  text-shadow: white 1px 1px 0px, white -1px -1px 0px, white 1px -1px 0px,
-    white -1px 1px 0px, white 2px 2px 0px, white -2px -2px 0px,
-    white 2px -2px 0px, white -2px 2px 0px, white 3px 3px 0px,
-    white -3px -3px 0px, white 3px -3px 0px, white -3px 3px 0px,
-    white 4px 4px 0px, white -4px -4px 0px, white 4px -4px 0px,
-    white -4px 4px 0px, white 5px 5px 0px, white -5px -5px 0px,
-    white 5px -5px 0px, white -5px 5px 0px, white 6px 6px 0px,
-    white -6px -6px 0px, white 6px -6px 0px, white -6px 6px 0px,
-    white 7px 7px 0px, white -7px -7px 0px, white 7px -7px 0px,
-    white -7px 7px 0px;
-}
-
-/* OPTION: White Text with Black Shadow */
-nul .shadow {
-  /* 2px White/Black */
-  font-weight: bolder;
-  color: white;
-  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
-    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
-    black 2px -2px 0px, black -2px 2px 0px;
-}
-
-/* OPTION: White on Black Box */
-nul article {
-  font-weight: bolder;
-  padding: 0.25em 0.5em 0.5em 0.5em;
-  border: black 3px solid;
-  border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.33);
-  color: white;
-}
-
 /* OPTION: White/Shadow on ... */
-article {
+#AboutArticle {
   font-weight: bolder;
   color: white;
   text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
@@ -101,20 +58,71 @@ article {
   padding: 0.25em 0.5em 0.5em 0.5em;
 }
 /* On Black Box */
-article {
+#AboutArticle {
   border: black 3px solid;
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.33);
 }
 
-/* OPTION: Black on White Box */
-nul article {
+/* *********************** */
+/* GAME STYLES */
+
+#Game {
+  flex: 1 0 auto;
+  background-image: url("MeetMyCat.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-wrap: nowrap;
+  place-items: center;
+  place-content: center;
+}
+
+#GameArticle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  place-content: center;
+}
+
+#GameArticle {
   font-weight: bolder;
+  color: white;
+  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
+    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
+    black 2px -2px 0px, black -2px 2px 0px;
   padding: 0.25em 0.5em 0.5em 0.5em;
-  border: white 3px solid;
+}
+
+/* On Black Box */
+#GameArticle {
+  border: black 3px solid;
   border-radius: 1em;
-  background-color: rgba(255, 255, 255, 0.33);
-  color: black;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+#GameArticle h1,
+#GameArticle h2,
+#GameArticle h3 {
+  margin: 0.25em;
+}
+
+#GameArticle h1 {
+  font-weight: bolder;
+}
+
+#GameArticle ul {
+  list-style: none;
+}
+
+.Answer {
+  padding-left: 1.5em;
+  color: rgb(128, 128, 128);
+  opacity: 0.67;
 }
 
 #DemoMessage {
