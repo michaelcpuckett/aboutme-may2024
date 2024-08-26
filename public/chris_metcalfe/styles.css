@@ -78,6 +78,7 @@ main {
   flex-wrap: nowrap;
   place-items: center;
   place-content: center;
+  display: none;
 }
 
 #GameArticle {
