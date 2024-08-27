@@ -58,7 +58,7 @@ button {
 #AboutMe {
   flex-grow: 1;
 
-  background-image: url("ChocolateCat.jpeg");
+  background-image: url("img/ChocolateCat.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -100,7 +100,7 @@ button {
 #Game {
   flex-grow: 1;
 
-  background-image: url("MeetMyCat.jpeg");
+  background-image: url("img/MeetMyCat.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

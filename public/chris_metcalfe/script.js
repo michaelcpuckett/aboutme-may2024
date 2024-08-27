@@ -3,6 +3,9 @@
 console.log('JavaCat writes "Hello World!"');
 DemoMessage('PS: JavaCat says "Hello World!"');
 
+// saveAsFile("myQuestions.json", myQuestions);
+// exit;
+
 document.getElementById("PowerButton").addEventListener("click", function () {
   console.log("PowerButton Clicked");
   ToggleDisplayFlex("Main");
@@ -22,6 +25,8 @@ document.getElementById("GameButton").addEventListener("click", function () {
   document.getElementById("Game").style.display = "flex";
 });
 
+ListQuestions("ListOfQuestions", myQuestions);
+
 // Functions ...
 
 function ToggleDisplayFlex(elementIdName) {
@@ -36,4 +41,16 @@ function ToggleDisplayFlex(elementIdName) {
   } else {
     element.style.display = "flex";
   }
+}
+
+function ListQuestions(elementIdName, questions) {
+  let element = document.getElementById(elementIdName);
+  let html = "";
+  for (let i = 0; i < questions.length; i++) {
+    html += `<li>${questions[i].question}`;
+    if (questions[i].answer !== "") {
+      html += `<div class="Answer">${questions[i].isTrue} : ${questions[i].answer}</div></li>`;
+    }
+  }
+  element.innerHTML = html;
 }

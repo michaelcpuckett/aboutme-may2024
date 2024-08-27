@@ -10,14 +10,14 @@
   <body>
     <div id="NavButtons" style="display: flex">
       <button id="PowerButton" type="button">
-        <img src="Power128.png" height="16" />
+        <img src="img/Power128.png" height="16" />
       </button>
       <button id="AboutMeButton" type="button">About Me</button>
       <button id="GameButton" type="button">Get To Know Me</button>
       <button id="ContactButton" type="button">Contact Me</button>
       <div id="NavSpacer" style="flex-grow: 1"></div>
       <img
-        src="WeatherKittyC.jpeg"
+        src="img/WeatherKittyC.jpeg"
         height="32"
         style="float: right; margin: 3px"
       />
@@ -43,7 +43,7 @@
           <h1>Get to Know Me Game</h1>
           <h2>Truth or Lie?</h2>
           <h3>Which of the following are True, and which are false?</h3>
-          <ul>
+          <ul id="ListOfQuestions">
             <li>
               I live with 6 siblings and forty-leven half-siblings and cousins.
               <div class="Answer">
@@ -124,7 +124,9 @@
     </main>
 
     <!-- defer keyword, and some initial values above for functionality -->
-    <script src="./functions.js"></script>
-    <script src="./script.js" defer></script>
+    <script src="src/functions.js"></script>
+    <script src="src/classes.js"></script>
+    <script src="files/myQuestions.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
