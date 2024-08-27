@@ -8,9 +8,23 @@
     <title>About Chris Metcalfe</title>
   </head>
   <body>
-    <button id="PowerButton" type="button"><img src="Power128.png" /></button>
-    <main id="Main">
-      <div id="About">
+    <div id="NavButtons" style="display: flex">
+      <button id="PowerButton" type="button">
+        <img src="Power128.png" height="16" />
+      </button>
+      <button id="AboutMeButton" type="button">About Me</button>
+      <button id="GameButton" type="button">Get To Know Me</button>
+      <button id="ContactButton" type="button">Contact Me</button>
+      <div id="NavSpacer" style="flex-grow: 1"></div>
+      <img
+        src="WeatherKittyC.jpeg"
+        height="32"
+        style="float: right; margin: 3px"
+      />
+    </div>
+
+    <main id="Main" style="display: flex">
+      <div id="AboutMe">
         <article id="AboutArticle">
           <h1 class="shadow">About Angel Hornet</h1>
           <p class="shadow">
@@ -24,7 +38,7 @@
           </ul>
         </article>
       </div>
-      <div id="Game">
+      <div id="Game" style="display: none">
         <article id="GameArticle">
           <h1>Get to Know Me Game</h1>
           <h2>Truth or Lie?</h2>
@@ -103,10 +117,14 @@
           </ul>
         </article>
       </div>
-      <div id="DemoMessage"></div>
+      <div
+        id="DemoMessage"
+        style="position: absolute; bottom: 0; right: 0"
+      ></div>
     </main>
 
+    <!-- defer keyword, and some initial values above for functionality -->
     <script src="./functions.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
