@@ -5,6 +5,7 @@ class Question {
     this.isTrue = isTrue; // attribute isTrue
     this.question = question; // attribute Question
     this.answer = answer; // attribute Answer
+    this.htmlElement = null; // attribute object
   }
 
   toString() {

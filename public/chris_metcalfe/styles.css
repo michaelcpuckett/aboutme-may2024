@@ -42,7 +42,7 @@ button {
   align-items: center;
   justify-content: center;
   color: black;
-  background-color: grey;
+  background-color: lightgrey;
   border-radius: 25cqmin;
   margin: 0.25em;
   padding: 0.1em 0.5em;
@@ -95,7 +95,8 @@ button {
 }
 
 /* *********************** */
-/* GAME STYLES */
+/* GAME LAYOUT STYLES */
+/* The Questions Styles are in a separate file, public/chris_metcalfe/styles/questions.css */
 
 #Game {
   flex-grow: 1;
@@ -151,11 +152,22 @@ button {
   list-style: none;
 }
 
-.Answer {
-  padding-left: 1.5em;
-  color: rgb(128, 128, 128);
-  opacity: 0.67;
+#GameSubmit {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
+
+#GameSubmitButton {
+  background-color: white;
+  font-size: larger;
+}
+#GameResetButton {
+  background-color: white;
+}
+
+/* *********************** */
+/* MISC STYLES */
 
 #DemoMessage {
   position: fixed;

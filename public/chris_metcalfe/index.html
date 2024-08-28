@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/questions.css" />
     <title>About Chris Metcalfe</title>
   </head>
   <body>
@@ -41,80 +42,33 @@
       <div id="Game" style="display: none">
         <article id="GameArticle">
           <h1>Get to Know Me Game</h1>
-          <h2>Truth or Lie?</h2>
+          <!-- <h2>Truth or Lie?</h2> -->
           <h3>Which of the following are True, and which are false?</h3>
           <ul id="ListOfQuestions">
-            <li>
-              I live with 6 siblings and forty-leven half-siblings and cousins.
-              <div class="Answer">
-                All seven of us do all live on the old man's place, but there
-                aren't really forty-leven of us, it just feels that way.
-              </div>
-            </li>
-            <li>
-              I'm not afraid of anything, I'll take them all on.
-              <div class="Answer">
-                I'm not even afraid of a bear one on one, but the neighbor's
-                meany tail dogs don't fight fair, they all dog-pile on all at
-                once.
-              </div>
-            </li>
-            <li>
-              I love to play ball.
-              <div class="Answer">
-                Bubby, Fox, and Brie are the ball players. I'd rather go for a
-                walk or hang out in the hammock.
-              </div>
-            </li>
-            <li>
-              I love smoking lady bugs.
-              <div class="Answer">
-                That's sissy Tiger. I tried one and gagged and nearly threw-up.
-              </div>
-            </li>
-            <li>
-              I have my pilot's license.
-              <div class="Answer">
-                I was the first graduate of sissy Tiger's Flight Training
-                School.
-              </div>
-            </li>
-            <li>
-              Bubby Mischief is my best friend.
-              <div class="Answer">
-                If you want pick on him, you have to go through me first.
-              </div>
-            </li>
-            <li>
-              The Vet has a mugshot of me on their office wall.
-              <div class="Answer">
-                I was number one on the mugshot wall until this german shepard
-                boy came along. I'm going to have to up my game.
-              </div>
-            </li>
-            <li>
-              Murder Mittens brand "Sea Captains Throw-up" is my favorite
-              flavor.
-              <div class="Answer">
-                There's nothing better than a little burbon flavor mixed in with
-                your anchovies and sardines.
-              </div>
-            </li>
-            <li>
-              I love hammocks and long walks with Gramps.
-              <div class="Answer">
-                I could spend all day with Gramps or just hanging out in the
-                hammock.
-              </div>
-            </li>
-            <li>
-              I love British Murder Mysteries.
-              <div class="Answer">
-                I do, killing humans is the best. But sissy Checkers is totally
-                obsessed with them in a scary way.
+            <li class="QuestionStructure">
+              <fieldset class="Radio">
+                <label>
+                  <input type="radio" name="Test1" value="true" /> True
+                </label>
+                <label>
+                  <input type="radio" name="Test1" value="false" /> False
+                </label>
+              </fieldset>
+              <div class="QuestionAnswerPair">
+                <p class="Question">
+                  I'm Gramp's little Angel and Gramm's little Hornet.
+                </p>
+                <p class="Answer">
+                  Gramps calls me his little Angel, but Gramm says he just saw
+                  my wings buzzing around and missed the stinger on my tail.
+                </p>
               </div>
             </li>
           </ul>
+          <div id="GameSubmit">
+            <button id="GameSubmitButton" type="button">Submit</button>
+            <button id="GameResetButton" type="button">Reset</button>
+          </div>
         </article>
       </div>
       <div
@@ -125,6 +79,7 @@
 
     <!-- defer keyword, and some initial values above for functionality -->
     <script src="src/functions.js"></script>
+    <script src="src/lodash.js"></script>
     <script src="src/classes.js"></script>
     <script src="files/myQuestions.js"></script>
     <script src="script.js" defer></script>

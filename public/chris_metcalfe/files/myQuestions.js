@@ -3,7 +3,7 @@ myQuestions.push(
   new Question(
     false,
     "I live with 6 siblings and forty-leven half-siblings and cousins.",
-    "All seven of us do all live on the old man's place, but there aren't really forty-leven of us, it just feels that way."
+    "All seven of us do all live on the old man's place, but there aren't really forty-leven of us, it just feels that way sometimes."
   )
 );
 
@@ -42,7 +42,7 @@ myQuestions.push(
 myQuestions.push(
   new Question(
     true,
-    "Bubby Mischief is my best friend.",
+    "My Bubby Mischief is my best friend.",
     "If you want pick on him, you have to go through me first."
   )
 );
