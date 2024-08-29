@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="WeatherKitty/WeatherKitty.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="styles/questions.css" />
+
     <title>About Chris Metcalfe</title>
   </head>
   <body>
@@ -17,11 +19,17 @@
       <button id="GameButton" type="button">Get To Know Me</button>
       <button id="ContactButton" type="button">Contact Me</button>
       <div id="NavSpacer" style="flex-grow: 1"></div>
-      <img
-        src="img/WeatherKittyC.jpeg"
-        height="32"
-        style="float: right; margin: 3px"
-      />
+      <!-- ... -->
+
+      <!-- Weather Kitty  -->
+      <div id="WeatherKittyWidget">
+        <div id="WeatherKittyCurrent"></div>
+        <div id="WeatherKittyForecast"></div>
+        <div id="WeatherKittyToolTip"></div>
+      </div>
+      <!-- /Weather Kitty -->
+
+      <!-- ... -->
     </div>
 
     <main id="Main" style="display: flex">
@@ -155,5 +163,6 @@
     <script src="files/myQuestions.js"></script>
     <!-- Then the initial primary script with the  defer keyword -->
     <script src="script.js" defer></script>
+    <script src="WeatherKitty/WeatherKitty.js"></script>
   </body>
 </html>

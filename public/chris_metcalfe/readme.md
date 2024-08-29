@@ -10,8 +10,8 @@
 
 ### 24/08/29
 
-- created a logical order for the js files
--
+- Created a logical order for the js files
+- Added Weather Kitty
 
 ### 24/08/28
 
