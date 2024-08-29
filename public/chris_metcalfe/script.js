@@ -9,6 +9,10 @@ DemoMessage('PS: JavaCat says "Hello World!"');
 document.getElementById("PowerButton").addEventListener("click", function () {
   console.log("PowerButton Clicked");
   ToggleDisplayFlex("Main");
+  ToggleDisplayFlex("AboutMeButton");
+  ToggleDisplayFlex("GameButton");
+  ToggleDisplayFlex("ContactButton");
+  ToggleDisplayFlex("WeatherKittyWidget");
 });
 
 document.getElementById("AboutMeButton").addEventListener("click", function () {

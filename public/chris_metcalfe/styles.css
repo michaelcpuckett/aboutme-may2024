@@ -143,6 +143,15 @@ button {
   background-color: rgba(0, 0, 0, 0.33);
 }
 
+#ContactMeArticle a {
+  color: white;
+  text-decoration: none;
+}
+
+#ContactMeArticle a:visited {
+  color: none;
+}
+
 /* *********************** */
 /* GAME LAYOUT STYLES */
 /* The Questions Styles are in a separate file, public/chris_metcalfe/styles/questions.css */
