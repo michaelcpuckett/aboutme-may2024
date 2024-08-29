@@ -4,7 +4,6 @@
 
 - Refactor into cards of three, two truths and a lie
 - Add more questions
-- Add Contact Me page
 - Fix Weather Kitty
 
 ## Blog
@@ -25,6 +24,7 @@
     - significant additional code? I feel like it would be, at least for me.
     - make it more of a card for mobile compatibility
     - animate the cards?
+- Added initial Contact Page
 
 ### 24/08/27
 
