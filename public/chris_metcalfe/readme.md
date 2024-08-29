@@ -8,6 +8,11 @@
 
 ## Blog
 
+### 24/08/29
+
+- created a logical order for the js files
+-
+
 ### 24/08/28
 
 - added loadash.js library: https://lodash.com/
