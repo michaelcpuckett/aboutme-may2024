@@ -1,10 +1,11 @@
 // addEventListener("load", ... );
+// saveAsFile("myQuestions.json", myQuestions);
+// exit;
 
 console.log('JavaCat writes "Hello World!"');
 // DemoMessage('PS: JavaCat says "Hello World!"');
 
-// saveAsFile("myQuestions.json", myQuestions);
-// exit;
+WeatherKitty();
 
 document.getElementById("PowerButton").addEventListener("click", function () {
   console.log("PowerButton Clicked");
