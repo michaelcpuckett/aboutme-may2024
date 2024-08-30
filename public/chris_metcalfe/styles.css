@@ -236,5 +236,5 @@ button {
   background-color: rgba(0, 0, 0, 0.33);
   padding: 0.1em 0.5em;
   color: white;
-  font-size: x-small;
+  display: none;
 }

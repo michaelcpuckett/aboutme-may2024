@@ -1,7 +1,7 @@
 // addEventListener("load", ... );
 
 console.log('JavaCat writes "Hello World!"');
-DemoMessage('PS: JavaCat says "Hello World!"');
+// DemoMessage('PS: JavaCat says "Hello World!"');
 
 // saveAsFile("myQuestions.json", myQuestions);
 // exit;
