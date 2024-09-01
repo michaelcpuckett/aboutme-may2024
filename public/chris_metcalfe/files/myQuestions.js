@@ -78,3 +78,19 @@ myQuestions.push(
     "I do, killing humans is the best.  But sissy Checkers is totally obsessed with them in a scary way."
   )
 );
+
+myQuestions.push(
+  new Question(
+    true,
+    "My brother Nino loves to wear dirty underwear on his head.",
+    "Yeap, he's a weirdo.  At least he doesn't roll like a dog in dead skunk carcasses."
+  )
+);
+
+myQuestions.push(
+  new Question(
+    true,
+    "My sister Kibbs always wears her nails with french tips.",
+    "She's a bit girly, but predictable"
+  )
+);

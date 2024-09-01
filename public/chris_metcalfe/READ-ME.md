@@ -4,9 +4,14 @@
 
 - Refactor into cards of three, two truths and a lie
 - Add more questions
-- Fix Weather Kitty
 
 ## Blog
+
+### 24/09/01
+
+- Refreshed VisualStuidoIDE API Certificates, fixing a bug caused by VSCode.LiveServer.Https and VisualStudioIDE interaction.
+- Added a class to convert the one page of questions into 3 pages of 'Two Truths and a Lie'.
+  - It's an interconnected mess, but I'll do better next time.
 
 ### 24/08/29
 

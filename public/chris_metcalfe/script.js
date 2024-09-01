@@ -2,103 +2,129 @@
 // saveAsFile("myQuestions.json", myQuestions);
 // exit;
 
-console.log('JavaCat writes "Hello World!"');
-// DemoMessage('PS: JavaCat says "Hello World!"');
+// Main
+{
+  let selectedQuestions = [];
+  let gamePage;
 
-WeatherKitty();
+  // Nav Buttons - I know this is a bad idea, but I was playing with buttons and it just happened.
+  {
+    document
+      .getElementById("PowerButton")
+      .addEventListener("click", function () {
+        console.log("PowerButton Clicked");
+        ToggleDisplayFlex("Main");
+        ToggleDisplayFlex("AboutMeButton");
+        ToggleDisplayFlex("GameButton");
+        ToggleDisplayFlex("ContactButton");
+        ToggleDisplayFlex("WeatherKittyWidget");
+      });
+    document
+      .getElementById("AboutMeButton")
+      .addEventListener("click", function () {
+        console.log("About Me Clicked");
+        document.getElementById("Main").style.display = "flex";
+        document.getElementById("AboutMe").style.display = "flex";
+        document.getElementById("Game").style.display = "none";
+        document.getElementById("ContactMe").style.display = "none";
+      });
+    document
+      .getElementById("GameButton")
+      .addEventListener("click", function () {
+        console.log("Game Clicked");
+        document.getElementById("Main").style.display = "flex";
+        document.getElementById("AboutMe").style.display = "none";
+        document.getElementById("Game").style.display = "flex";
+        document.getElementById("ContactMe").style.display = "none";
+      });
+    document
+      .getElementById("ContactButton")
+      .addEventListener("click", function () {
+        console.log("Game Clicked");
+        document.getElementById("Main").style.display = "flex";
+        document.getElementById("AboutMe").style.display = "none";
+        document.getElementById("Game").style.display = "none";
+        document.getElementById("ContactMe").style.display = "flex";
+      });
+  }
+  // Game Buttons
+  {
+    document
+      .getElementById("GameSubmitButton")
+      .addEventListener("click", function () {
+        console.log("GameSubmitButton Clicked");
+        let score = 0;
+        let total = selectedQuestions.length;
 
-document.getElementById("PowerButton").addEventListener("click", function () {
-  console.log("PowerButton Clicked");
-  ToggleDisplayFlex("Main");
-  ToggleDisplayFlex("AboutMeButton");
-  ToggleDisplayFlex("GameButton");
-  ToggleDisplayFlex("ContactButton");
-  ToggleDisplayFlex("WeatherKittyWidget");
-});
-
-document.getElementById("AboutMeButton").addEventListener("click", function () {
-  console.log("About Me Clicked");
-  document.getElementById("Main").style.display = "flex";
-  document.getElementById("AboutMe").style.display = "flex";
-  document.getElementById("Game").style.display = "none";
-  document.getElementById("ContactMe").style.display = "none";
-});
-
-document.getElementById("GameButton").addEventListener("click", function () {
-  console.log("Game Clicked");
-  document.getElementById("Main").style.display = "flex";
-  document.getElementById("AboutMe").style.display = "none";
-  document.getElementById("Game").style.display = "flex";
-  document.getElementById("ContactMe").style.display = "none";
-});
-
-document.getElementById("ContactButton").addEventListener("click", function () {
-  console.log("Game Clicked");
-  document.getElementById("Main").style.display = "flex";
-  document.getElementById("AboutMe").style.display = "none";
-  document.getElementById("Game").style.display = "none";
-  document.getElementById("ContactMe").style.display = "flex";
-});
-
-document
-  .getElementById("GameSubmitButton")
-  .addEventListener("click", function () {
-    console.log("GameSubmitButton Clicked");
-    let score = 0;
-    let total = myQuestions.length;
-
-    for (let i = 0; i < myQuestions.length; i++) {
-      let question = myQuestions[i];
-      question.htmlElement.querySelector(".Answer").classList.remove("hidden");
-      if (question.isTrue) {
-        if (document.getElementById(`QA${i}T`).checked) {
-          question.htmlElement.classList.remove("WrongIsTrue");
-          score++;
-        } else {
-          question.htmlElement.classList.add("WrongIsTrue");
+        for (let i = 0; i < selectedQuestions.length; i++) {
+          let question = selectedQuestions[i];
+          question.htmlElement
+            .querySelector(".Answer")
+            .classList.remove("hidden");
+          if (question.isTrue) {
+            if (document.getElementById(`QA${i}T`).checked) {
+              question.htmlElement.classList.remove("WrongIsTrue");
+              score++;
+            } else {
+              question.htmlElement.classList.add("WrongIsTrue");
+            }
+          } else {
+            if (document.getElementById(`QA${i}F`).checked) {
+              question.htmlElement.classList.remove("WrongIsFalse");
+              score++;
+            } else {
+              question.htmlElement.classList.add("WrongIsFalse");
+            }
+          }
         }
-      } else {
-        if (document.getElementById(`QA${i}F`).checked) {
-          question.htmlElement.classList.remove("WrongIsFalse");
-          score++;
-        } else {
-          question.htmlElement.classList.add("WrongIsFalse");
-        }
-      }
-    }
-    console.log(`You scored ${score} out of ${total}`);
-    alert(`You scored ${score} out of ${total}`);
-  });
+        console.log(`You scored ${score} out of ${total}`);
+        alert(`You scored ${score} out of ${total}`);
+      });
 
-document
-  .getElementById("GameResetButton")
-  .addEventListener("click", function () {
-    console.log("GameResetButton Clicked");
-    for (let i = 0; i < myQuestions.length; i++) {
-      let question = myQuestions[i];
-      question.htmlElement.querySelector(".Answer").classList.add("hidden");
-      question.htmlElement.classList.remove("Wrong");
-      question.htmlElement.classList.remove("WrongIsTrue");
-      question.htmlElement.classList.remove("WrongIsFalse");
-      document.getElementById(`QA${i}T`).checked = false;
-      document.getElementById(`QA${i}F`).checked = false;
-    }
-    myQuestions = _.shuffle(myQuestions);
-    ListQuestions("ListOfQuestions", myQuestions);
-  });
+    document
+      .getElementById("GameResetButton")
+      .addEventListener("click", function () {
+        selectedQuestions = ShuffledQuestions(myQuestions);
+        ListQuestions("ListOfQuestions", selectedQuestions);
+        delete gamePage;
+        gamePage = new GamePage(selectedQuestions);
+      });
+  }
 
-// https://lodash.com/
-// https://www.geeksforgeeks.org/lodash-_-shuffle-method/
-myQuestions = _.shuffle(myQuestions);
-ListQuestions("ListOfQuestions", myQuestions);
-// document.getElementById("ContactButton").click();
+  // console.log('JavaCat writes "Hello World!"');
+  // DemoMessage('PS: JavaCat says "Hello World!"');
 
-// <--- *** HERE *** --->
+  WeatherKitty();
+
+  selectedQuestions = ShuffledQuestions(myQuestions);
+  ListQuestions("ListOfQuestions", selectedQuestions);
+  gamePage = new GamePage(selectedQuestions);
+  document.getElementById("GameButton").click();
+}
 
 /* 
   FUNCTIONS ...
 */
 
+function ShuffledQuestions(questions) {
+  // https://lodash.com/
+  // https://www.geeksforgeeks.org/lodash-_-shuffle-method/
+  questions = _.shuffle(questions);
+
+  let questionsTrue = questions.filter((q) => q.isTrue);
+  let questionsFalse = questions.filter((q) => !q.isTrue);
+  let questionsMixed = [];
+  let questionsTrio = [];
+  for (let i = 0; i < 3; i++) {
+    questionsTrio = [];
+    questionsTrio.push(questionsFalse.pop());
+    questionsTrio.push(questionsTrue.pop());
+    questionsTrio.push(questionsTrue.pop());
+    questionsTrio = _.shuffle(questionsTrio);
+    questionsMixed = questionsMixed.concat(questionsTrio);
+  }
+  return questionsMixed;
+}
 function ToggleDisplayFlex(elementIdName) {
   let element = document.getElementById(elementIdName);
   let displayValue = element.style.display;
@@ -112,7 +138,6 @@ function ToggleDisplayFlex(elementIdName) {
     element.style.display = "flex";
   }
 }
-
 function ListQuestions(elementIdName, questions) {
   let element = document.getElementById(elementIdName);
   let html = "";
