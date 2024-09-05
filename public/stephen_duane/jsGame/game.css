@@ -34,7 +34,7 @@ body {
   }
 
   .container-hidden {
-    display: hidden;
+    display: none;
   }
 
   button {
@@ -47,4 +47,24 @@ body {
     color: #fefefe;
     font-weight: bold;
     font-size: 1em;
+  }
+
+  #start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    margin: 100px auto;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
   }
