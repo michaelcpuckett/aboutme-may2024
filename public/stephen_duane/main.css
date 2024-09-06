@@ -1,0 +1,58 @@
+* { 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+h1 {
+    display: flex;
+    background: #003865;
+    color: #fefefe;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-radius: 15px;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul > li {
+    list-style: none;
+    margin: 15px;
+    display: flex;
+    
+}
+
+.card {
+    background: #c65f06;
+    color: #fefefe;
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+}
+
+.jsGame {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.jsGame > li a {
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.jsGame > li a:hover {
+    border-bottom: 1px solid #fefefe;
+}

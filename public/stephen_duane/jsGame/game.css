@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+#title {
+    overflow: hidden;
+    border-right: .15em solid #E63946;
+    white-space: nowrap;
+    text-align: center;
+    margin: 2rem auto;
+    letter-spacing: .15em;
+    font-family: 'Nosifer';
+    color: #E63946;
+    animation: 
+    typing 10.0s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%};
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    25% { border-color: #E63946 }
+  }
+
+  .container-hidden {
+    display: none;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background: #E63946;
+    color: #fefefe;
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  #start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    margin: 100px auto;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
