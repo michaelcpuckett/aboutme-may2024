@@ -99,7 +99,7 @@
   selectedQuestions = ShuffledQuestions(myQuestions);
   ListQuestions("ListOfQuestions", selectedQuestions);
   gamePage = new GamePage(selectedQuestions);
-  document.getElementById("GameButton").click();
+  // document.getElementById("GameButton").click(); // For easy debugging and testing of the game.
 }
 
 /* 
