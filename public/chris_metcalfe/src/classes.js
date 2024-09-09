@@ -48,6 +48,7 @@ class GamePage {
 
     let submitButton = document.getElementById("GameSubmitButton");
 
+    submitButton.type = "button";
     submitButton = this.RemoveAllEventListeners(submitButton);
 
     if (this.page <= 2) {
