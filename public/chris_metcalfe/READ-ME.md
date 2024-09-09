@@ -2,8 +2,8 @@
 
 ## To-Do
 
-- Refactor into cards of three, two truths and a lie
-- Add more questions
+- Fix Card Score to use Title and Subtitle ... right now it conflicts with the form version
+- Add Animations
 
 ## Blog
 
