@@ -7,6 +7,14 @@
 
 ## Blog
 
+### 24/09/09
+
+- Added a FormData based variant
+
+### 24/09/05
+
+- Update after class
+
 ### 24/09/01
 
 - Refreshed VisualStuidoIDE API Certificates, fixing a bug caused by VSCode.LiveServer.Https and VisualStudioIDE interaction.
