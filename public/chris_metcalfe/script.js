@@ -5,10 +5,27 @@
 // Main
 let USEFORMS = true;
 let DEBUG = false;
+let myQuestions = [];
+let selectedQuestions = [];
+let gamePage;
 
-{
-  let selectedQuestions = [];
-  let gamePage;
+async function Main() {
+  // Load Questions from JSON file
+  await (async () => {
+    let myLoadQuestions = await LoadQuestions();
+    console.log("Loading Questions: ", myLoadQuestions);
+    for (let question of myLoadQuestions) {
+      if (DEBUG) {
+        console.log("Question: ", question);
+        console.log("Question.isTrue: ", question.isTrue);
+        console.log("Question.question: ", question.Question);
+        console.log("Question.answer: ", question.Answer);
+      }
+      myQuestions.push(
+        new Question(question.isTrue, question.Question, question.Answer)
+      );
+    }
+  })();
 
   // Nav Buttons - I know this is a bad idea, but I was playing with buttons and it just happened.
   {
@@ -45,6 +62,7 @@ let DEBUG = false;
         document.getElementById("GameTitle").innerHTML = "Two Truths and Lies";
         document.getElementById("GameSubTitle").innerHTML =
           "Which of the following are True, and which are false?";
+
         selectedQuestions = ShuffledQuestions(myQuestions);
         ListQuestions("ListOfQuestions", selectedQuestions);
         delete gamePage;
@@ -63,6 +81,7 @@ let DEBUG = false;
         document.getElementById("GameTitle").innerHTML = "Truths and Lies";
         document.getElementById("GameSubTitle").innerHTML =
           "Which of the following are True, and which are false?";
+
         selectedQuestions = ShuffledQuestions(myQuestions);
         ListQuestions("ListOfQuestions", selectedQuestions);
         UseFormData();
@@ -133,15 +152,11 @@ let DEBUG = false;
       });
   }
 
-  // console.log('JavaCat writes "Hello World!"');
-  // DemoMessage('PS: JavaCat says "Hello World!"');
-
-  WeatherKitty();
+  WeatherKitty(); // cjm
 
   if (DEBUG) document.getElementById("GameButton").click(); // For easy debugging and testing of the game.
-
-  // Form Data
 } // /Main
+Main();
 
 /* 
   FUNCTIONS ...
@@ -254,16 +269,16 @@ function ListQuestions(elementIdName, questions) {
   }
 }
 function UseFormData() {
-  document.getElementById("GameSubmitButton").type = "submit";
+  let submitButton = document.getElementById("GameSubmitButton");
+  submitButton.innerText = "Submit";
+  submitButton.type = "submit";
+  submitButton = RemoveAllEventListeners(submitButton);
+  submitButton.style.opacity = 1;
+
   const scoreTitle = document.getElementById("GameSubTitle");
   const output = document.getElementById("GameFormData");
   const form = document.getElementById("GameForm");
-  {
-    let element = document.getElementById("GameSubmitButton");
-    let removedAllEventListeners = element.cloneNode(true);
-    element.parentNode.replaceChild(removedAllEventListeners, element);
-    element = removedAllEventListeners;
-  }
+
   let attempts = 0;
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -272,7 +287,6 @@ function UseFormData() {
     const innerForm = event.target;
     const formData = new FormData(innerForm);
 
-    // cjm
     output.innerHTML = "";
     let score = 0;
     let total = 0;

@@ -14,3 +14,9 @@ function saveAsFile(filename, data) {
   link.click();
   link.remove();
 }
+
+function RemoveAllEventListeners(element) {
+  let removedAllEventListeners = element.cloneNode(true);
+  element.parentNode.replaceChild(removedAllEventListeners, element);
+  return removedAllEventListeners;
+}

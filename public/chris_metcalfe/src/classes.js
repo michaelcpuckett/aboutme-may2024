@@ -27,12 +27,9 @@ class GamePage {
 
     let gameTitle = document.getElementById("GameTitle");
     let gameSubTitle = document.getElementById("GameSubTitle");
-    let gameMessage = document.getElementById("GameMessage");
     gameTitle.innerText = "Two Truths and a Lie";
     // gameSubTitle.innerText = "Can you spot the lie?";
     gameSubTitle.style.opacity = 1;
-    gameMessage.innerText = "";
-    gameMessage.style.display = "none";
 
     for (question of this.questions) {
       question.htmlElement.classList.add("hidden");
@@ -103,7 +100,6 @@ class GamePage {
     let submitButton = document.getElementById("GameSubmitButton");
     let gameTitle = document.getElementById("GameTitle");
     let gameSubTitle = document.getElementById("GameSubTitle");
-    let gameMessage = document.getElementById("GameMessage");
 
     submitButton.innerText = "Score";
     submitButton.addEventListener("click", () => {
@@ -120,15 +116,12 @@ class GamePage {
 
       gameTitle.innerText = `You got ${this.score} of ${this.questions.length} Correct for a Score of:`;
 
-      gameMessage.innerText = `${Math.round(
+      gameSubTitle.innerText = `${Math.round(
         (100 * this.score) / this.questions.length
       )}%`;
-      gameMessage.style.fontSize = "xx-large";
-      gameMessage.style.display = "block";
-      gameMessage.style.opacity = 1;
 
-      gameSubTitle.style.opacity = 0;
       submitButton.style.opacity = 0;
+      submitButton = RemoveAllEventListeners(submitButton);
     });
   }
 

@@ -7,6 +7,11 @@
 
 ## Blog
 
+### 24/09/10
+
+- Cleaning up various minor bugs
+- Added loading questions from json file.
+
 ### 24/09/09
 
 - Added a FormData based variant
