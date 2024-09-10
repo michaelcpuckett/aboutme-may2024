@@ -3,8 +3,9 @@
 // exit;
 
 // Main
-let USEFORMS = true;
 let DEBUG = false;
+
+let USEFORMS = true;
 let myQuestions = [];
 let selectedQuestions = [];
 let gamePage;
