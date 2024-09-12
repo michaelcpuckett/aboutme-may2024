@@ -153,8 +153,6 @@ async function Main() {
       });
   }
 
-  WeatherKitty(); // cjm
-
   if (DEBUG) document.getElementById("GameButton").click(); // For easy debugging and testing of the game.
 } // /Main
 Main();

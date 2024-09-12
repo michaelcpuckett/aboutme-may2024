@@ -52,8 +52,8 @@ button {
   font-weight: bolder;
 }
 
-#WeatherKittyWidget {
-  font-size: small;
+weather-kitty {
+  font-size: x-small;
 }
 
 #Main {
