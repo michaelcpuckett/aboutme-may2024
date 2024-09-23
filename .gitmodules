@@ -1,0 +1,3 @@
+[submodule "public/chris_metcalfe/WeatherKitty"]
+	path = public/chris_metcalfe/WeatherKitty
+	url = https://github.com/cjmet/WeatherKitty.git

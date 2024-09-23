@@ -1,0 +1,243 @@
+/* *** GRID PAGES WITH EQUAL HEIGHTS *** */
+/* Grid with equal page heights is the one case where we do NOT want html,body to be 100% */
+/* Html set border-box:  includes content, padding, and border, but does NOT include the margin. */
+/* Then use calc to subtract the margins: calc (100vh - margin * 2) */
+/* 
+html, body { 
+margin: 0;
+} 
+
+html {
+  box-sizing: border-box;
+  min-height: calc(100vh - 3px * 2);
+}
+
+main {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas: "about" "game";
+} 
+*/
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#NavButtons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: nowrap;
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: lightgrey;
+  border-radius: 25cqmin;
+  margin: 0.25em;
+  padding: 0.1em 0.5em;
+  font-size: large;
+  font-weight: bolder;
+}
+
+weather-kitty {
+  font-size: x-small;
+}
+
+#Main {
+  flex-grow: 1;
+  background-color: skyblue;
+  display: flex;
+}
+
+#AboutMe {
+  flex-grow: 1;
+
+  background-image: url("img/ChocolateCat.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-wrap: nowrap;
+  place-items: center;
+  place-content: center;
+}
+
+#AboutArticle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  place-content: center;
+}
+
+/* OPTION: White/Shadow on ... */
+#AboutArticle {
+  font-weight: bolder;
+  color: white;
+  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
+    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
+    black 2px -2px 0px, black -2px 2px 0px;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+/* On Black Box */
+#AboutArticle {
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+/* *********************** */
+/* Contact Me Styles */
+
+#ContactMe {
+  flex-grow: 1;
+
+  background-image: url("img/MailDelivery_13.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-wrap: nowrap;
+  place-items: center;
+  place-content: center;
+}
+
+#ContactMeArticle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  place-content: center;
+}
+
+/* OPTION: White/Shadow on ... */
+#ContactMeArticle {
+  font-weight: bolder;
+  color: white;
+  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
+    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
+    black 2px -2px 0px, black -2px 2px 0px;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+/* On Black Box */
+#ContactMeArticle {
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+#ContactMeArticle a {
+  color: white;
+  text-decoration: none;
+}
+
+#ContactMeArticle a:visited {
+  color: none;
+}
+
+/* *********************** */
+/* GAME LAYOUT STYLES */
+/* The Questions Styles are in a separate file, public/chris_metcalfe/styles/questions.css */
+
+#Game {
+  flex-grow: 1;
+
+  background-image: url("img/MeetMyCat.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  display: none;
+  flex-wrap: nowrap;
+  place-items: center;
+  place-content: center;
+}
+
+#GameArticle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  place-content: center;
+}
+
+#GameArticle {
+  font-weight: bolder;
+  color: white;
+  text-shadow: black 1px 1px 0px, black -1px -1px 0px, black 1px -1px 0px,
+    black -1px 1px 0px, black 2px 2px 0px, black -2px -2px 0px,
+    black 2px -2px 0px, black -2px 2px 0px;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+
+/* On Black Box */
+#GameArticle {
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+#GameArticle h1,
+#GameArticle h2,
+#GameArticle h3 {
+  margin: 0.25em;
+}
+
+#GameArticle h1 {
+  font-weight: bolder;
+}
+
+#GameArticle ul {
+  list-style: none;
+}
+
+#GameSubmit {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#GameSubmitButton {
+  background-color: white;
+  font-size: larger;
+}
+#GameResetButton {
+  background-color: white;
+  font-size: small;
+  /* justify-self: center; */
+  align-self: center;
+}
+
+/* *********************** */
+/* MISC STYLES */
+
+#DemoMessage {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border: black 3px solid;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.33);
+  padding: 0.1em 0.5em;
+  color: white;
+  display: none;
+}

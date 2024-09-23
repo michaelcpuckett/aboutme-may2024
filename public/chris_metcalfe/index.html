@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/questions.css" />
+
+    <title>About Chris Metcalfe</title>
+  </head>
+  <body>
+    <div id="NavButtons" style="display: flex">
+      <button id="PowerButton" type="button">
+        <img src="img/Power128.png" height="16" />
+      </button>
+      <button id="AboutMeButton" type="button">About Me</button>
+      <button id="GameButton" type="button">Get to know me GAME</button>
+      <button id="FormButton" type="button">Get to know me FORM</button>
+      <button id="ContactButton" type="button">Contact Me</button>
+      <div id="NavSpacer" style="flex-grow: 1"></div>
+      <!-- ... -->
+
+      <!-- Weather Kitty  -->
+      <weather-kitty></weather-kitty>
+      <!-- /Weather Kitty -->
+
+      <!-- ... -->
+    </div>
+
+    <main id="Main" style="display: flex">
+      <section id="AboutMe">
+        <article id="AboutArticle">
+          <h1 class="shadow">About Angel Hornet</h1>
+          <p class="shadow">
+            I'm a student in the May 2024 cohort of the Code You program.
+          </p>
+          <ul class="shadow">
+            <title>My Hobbies</title>
+            <li>Reading cozy mysteries</li>
+            <li>Scratching cat ears</li>
+            <li>Taste Testing Authentic Belgium Chocolates</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="Game" style="display: none">
+        <form id="GameForm">
+          <article id="GameArticle">
+            <h1 id="GameTitle">Get to Know Me Game</h1>
+            <!-- <h2>Truth or Lie?</h2> -->
+            <h3 id="GameSubTitle">
+              Which of the following are True, and which are false?
+            </h3>
+            <div id="GameMessage"></div>
+
+            <ul id="ListOfQuestions">
+              <li class="QuestionStructure">
+                <fieldset class="Radio">
+                  <label>
+                    <input type="radio" name="true" value="true" /> True
+                  </label>
+                  <label>
+                    <input type="radio" name="true" value="false" /> False
+                  </label>
+                  <input
+                    type="radio"
+                    name="true"
+                    value="none"
+                    checked
+                    style="display: none"
+                  />
+                </fieldset>
+                <div class="QuestionAnswerPair">
+                  <p class="Question">
+                    I'm Gramp's little Angel and Gramm's little Hornet. (Static)
+                  </p>
+                  <p class="Answer">
+                    Gramps calls me his little Angel, but Gramm says he just saw
+                    my wings buzzing around and missed the stinger on my tail.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div id="GameSubmit">
+              <button id="GameSubmitButton" type="button">Submit</button>
+              <button id="GameResetButton" type="button">Reset</button>
+            </div>
+            <div id="GameFormData"></div>
+          </article>
+        </form>
+      </section>
+
+      <section id="ContactMe" style="display: none">
+        <article id="ContactMeArticle">
+          <h2>Contact Me</h2>
+          <table class="contact-content">
+            <tr>
+              <td>
+                <img
+                  id="icon-email"
+                  class="icon"
+                  src="img/Email.svg"
+                  alt="Email"
+                />
+              </td>
+              <td>Angel.Hornet@No.Email.None</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  class="icon"
+                  src="img/github-mark-white.svg"
+                  height="16"
+                  alt="GitHub"
+                />
+              </td>
+              <td>
+                <a href="https://github.com/404" target="_blank"
+                  >https://github.com/nony.mouse</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  class="icon"
+                  src="img/In-White-21.png"
+                  height="16"
+                  alt="LinkedIn"
+                />
+              </td>
+              <td>
+                <a href="https://www.linkedin.com/404" target="_blank"
+                  >https://www.linkedin.com/nony.mouse</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  class="icon"
+                  src="img/home.png"
+                  height="16"
+                  alt="Address"
+                />
+              </td>
+              <td>4321 Main St. Louisville, KY 40202</td>
+            </tr>
+            <tr>
+              <td>
+                <img class="icon" src="img/phone.png" height="16" alt="Phone" />
+              </td>
+              <td>987-654-3210</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+
+      <div id="DemoMessage" style="position: absolute; bottom: 0; right: 0">
+        Demo Message
+      </div>
+    </main>
+
+    <div id="JavaScript">
+      <!-- Libraries First  -->
+      <script src="src/lodash.js"></script>
+      <!-- Then Functions, aka my library -->
+      <script src="src/functions.js"></script>
+      <!-- Then classes  -->
+      <script src="src/classes.js"></script>
+      <!-- Then Data -->
+      <script src="src/loadquestions.js"></script>
+      <!-- Then the initial primary script with the  defer keyword -->
+      <script src="WeatherKitty/WeatherKitty.mjs" type="module"></script>
+      <script src="script.js" defer></script>
+    </div>
+  </body>
+</html>
